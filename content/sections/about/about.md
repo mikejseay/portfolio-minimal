@@ -1,14 +1,14 @@
 ---
-imageSrc: "../../images/charles-deluvio-DgoyKNgPiFQ-unsplash.jpg"
-imageAlt: "About Gatsby Theme Portfolio Minimal"
+imageSrc: "../../images/about_tree.jpg"
+imageAlt: "About Me"
 ---
 
-Portfolio Minimal is a Gatsby Theme that creates outstanding one-pages portfolio within minutes!
+Trained as a computational neuroscientist, I've spent the past 11 years processing, storing, analyzing, and visualizing complex datasets.
 
-It has predefined sections for your bio, skills, projects, and contact details. If you are a writer on Medium, you can integrate your latest articles in a distinct section as well. While building the theme, I tried to keep the setup as simple as possible while keeping everything configurable if you like to.
+Born and raised in New Orleans, I attended Tulane University, where I received my BS and MS degrees in Neuroscience. There, I created my first data processing architectures to support analysis of complex neurobehavioral datasets.
 
-Using theme composition, you can easily customize the CSS theme to your own preferences - e.g. change colors, fonts, etc.
+In 2015, I moved to New York and joined a lab with way more data: tens of thousands of participants with neurobehavioral, genealogical, and genetic information. I co-engineered a database system to store, update, and access 100k+ records from disparate sources, and I wrote a module for analyzing and plotting EEG data. I utilized the tools I made to create visualizations supporting the lab's grants and publications.
 
-Last but not least, it has some cool features you can opt-in to: Dark Mode, Splash Screen, Cookie Banner, and more to find out :)
+From 2017 to 2022 I completed a Ph.D at UCLA, where I focused on creating computational models that could explain neural functions. Through my work, I gained foundational knowledge of statistics and machine learning from the neuroscientific perspective, and I continued refining my skills in handling large and complex datasets.
 
-Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link"><u>Charles Deluvio</u></a> on Unsplash
+My intention for the next long-term chapter of my life is to bring my skills and knowledge to industry.
