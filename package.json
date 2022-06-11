@@ -39,5 +39,8 @@
     "animations",
     "dark-mode",
     "gdpr-compliant"
-  ]
+  ],
+  "devDependencies": {
+    "@parcel/namer-default": "^2.5.0"
+  }
 }
