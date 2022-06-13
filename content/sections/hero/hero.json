@@ -1,4 +1,8 @@
 {
+  "leftImage": {
+    "src": "../../images/me_hero.jpg",
+    "alt": "Selfie"
+  },
   "intro": "Hi!",
   "image": {
     "src": "../../images/victory-hand.png",
@@ -6,13 +10,13 @@
   },
   "title": "I'm Mike Seay.",
   "subtitle": {
-    "prefix": "Computational neuroscientist, lover of ",
+    "prefix": "Neuroscientist, lover of ",
     "highlight": "data",
     "suffix": "."
   },
   "description": "And I'm looking for a job.",
   "socialProfiles": {
     "from": ["LinkedIn", "Github", "Mail"],
-    "showIcons": false
+    "showIcons": true
   }
 }

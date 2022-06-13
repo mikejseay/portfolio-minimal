@@ -4,12 +4,12 @@ sectionId: imprint
 
 #### Information pursuant to § 5 TMG
 
-YOURNAME<br />
-YOURSTREET<br />
-YOURCITY<br />
-YOURCOUNTRY
+Michael Seay<br />
+255 N Granada Ave Apt 2059<br />
+Tucson, AZ 85701<br />
+USA
 
-E-Mail Address: <u>YOURMAIL@DOMAIN.COM</u>
+E-Mail Address: <u>mikejseay@gmail.com</u>
 
 ---
 
