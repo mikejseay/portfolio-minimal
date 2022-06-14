@@ -1,0 +1,30 @@
+h1.database {
+    text-align: center;
+}
+
+p.database {
+    width: 50%;
+    margin: 1em auto 1em auto;
+}
+
+img.database {
+    margin: 1em auto 1em auto;
+    display: block;
+}
+
+a:link.database {
+    color: blue;
+    text-decoration: underline;
+}
+a:visited.database {
+    color: purple;
+    text-decoration: underline;
+}
+a:hover.database {
+    color: hotpink;
+    text-decoration: underline;
+}
+a:active.database {
+    color: red;
+    text-decoration: underline;
+}

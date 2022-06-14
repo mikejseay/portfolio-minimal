@@ -9,12 +9,34 @@
       "image": {
         "src": "../../images/pedigree.png",
         "alt": "Lab Database",
-        "linkTo": "https://github.com/HBNLdev/DataStore"
+        "linkTo": "/database"
       },
       "links": [
         {
+          "type": "external",
+          "url": "/database"
+        },
+        {
           "type": "github",
           "url": "https://github.com/HBNLdev/DataStore"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "Data Visualization",
+      "title": "AirBnBs in New Orleans: Tableau Study",
+      "description": "Using a public database of AirBnB listings, I created this interactive visualization in Tableau. It shows AirBnB listings in my home town of New Orleans. Point size is based on the number of reviews, and point color is based on the price per bedroom. The user can filter listings shown based on the number of beds, bedrooms, and the room type. Hovering a listing shows key info in a tooltip.",
+      "tags": ["Database", "Data Visualization"],
+      "image": {
+        "src": "../../images/tableau_viz.png",
+        "alt": "Tableau Visualization",
+        "linkTo": "https://10az.online.tableau.com/t/mikeseaystableau/views/airBnB/AirBnBListingsinNewOrleans?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link"
+      },
+      "links": [
+        {
+          "type": "external",
+          "url": "https://10az.online.tableau.com/t/mikeseaystableau/views/airBnB/AirBnBListingsinNewOrleans?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link"
         }
       ]
     },
@@ -33,6 +55,28 @@
         {
           "type": "external",
           "url": "https://quiet-garden-15924.herokuapp.com/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/mikejseay/exquisite-text-js-hub"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "Computer Art",
+      "title": "p5.js sketches",
+      "description": "p5.js is a simplified javascript library for making art. Here, I display a small gallery of dynamic sketches I've made using p5.js, which relate to abstract minimal art.",
+      "tags": ["p5.js", "Art"],
+      "image": {
+        "src": "../../images/p5js_example.png",
+        "alt": "Extendable Layout",
+        "linkTo": "/gallery"
+      },
+      "links": [
+        {
+          "type": "external",
+          "url": "/gallery"
         }
       ]
     }
