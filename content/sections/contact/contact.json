@@ -3,8 +3,9 @@
   "email": "mikejseay@gmail.com",
   "description": "I'm happy to chat about business inquires.",
   "image": {
-    "src": "../../images/neuro_thoughts.png",
-    "alt": "Your Thoughts Have an Electromagnetic Reality"
+    "src": "../../images/favicon_neuro.png",
+    "alt": "Your Thoughts Have an Electromagnetic Reality",
+    "linkTo": "mailto:mikejseay@gmail.com"
   },
   "socialProfiles": {
     "from": ["LinkedIn", "Github", "Mail"],

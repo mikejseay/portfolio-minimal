@@ -45,7 +45,7 @@
       "category": "Fun & Games",
       "title": "Exquisite Text",
       "description": "Exquisite Corpse is a game invented by surrealist artists in the 1920's. Each player adds to a composition in sequence, by being allowed to see only the end of what the previous person contributed. Here, I implemented an online multiplayer version for poetry.",
-      "tags": ["React", "Sockets", "Backend"],
+      "tags": ["React", "Socket.io", "Express", "Node.js"],
       "image": {
         "src": "../../images/exquisite-text.jpg",
         "alt": "Extendable Layout",
@@ -69,7 +69,7 @@
       "description": "p5.js is a simplified javascript library for making art. Here, I display a small gallery of dynamic sketches I've made using p5.js, which relate to abstract minimal art.",
       "tags": ["p5.js", "Art"],
       "image": {
-        "src": "../../images/p5js_example.png",
+        "src": "../../images/p5js_example2.png",
         "alt": "Extendable Layout",
         "linkTo": "/gallery"
       },
