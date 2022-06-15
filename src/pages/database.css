@@ -1,8 +1,10 @@
 .panel {
     display: flex;
     flex-direction: row;
-    width: 50%;
-    margin: 1em auto 1em auto;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    max-width: 840px;
 }
 
 .panelChild {
@@ -10,13 +12,15 @@
 }
 
 img.database {
+    width: auto;
+    height: auto;
     /*width: 15em;*/
-    max-height: 100%;
-    max-width: 100%;
+    /*max-height: 100%;*/
+    max-width: 360px;
 }
 
 p.database {
-    width: 30em;
+    width: 480px;
 }
 
 h1.database {
