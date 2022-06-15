@@ -1,15 +1,30 @@
-h1.database {
-    text-align: center;
-}
-
-p.database {
+.panel {
+    display: flex;
+    flex-direction: row;
     width: 50%;
     margin: 1em auto 1em auto;
 }
 
+.panelChild {
+    margin: auto 1em auto 1em;
+}
+
 img.database {
-    margin: 1em auto 1em auto;
-    display: block;
+    /*width: 15em;*/
+    max-height: 100%;
+    max-width: 100%;
+}
+
+p.database {
+    width: 30em;
+}
+
+h1.database {
+    text-align: center;
+}
+
+a.database {
+    display: inline;
 }
 
 a:link.database {

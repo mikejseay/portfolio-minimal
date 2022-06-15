@@ -31,12 +31,12 @@
       "image": {
         "src": "../../images/tableau_viz.png",
         "alt": "Tableau Visualization",
-        "linkTo": "https://10az.online.tableau.com/t/mikeseaystableau/views/airBnB/AirBnBListingsinNewOrleans?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link"
+        "linkTo": "https://public.tableau.com/views/airBnB_16553129535680/AirBnBListingsinNewOrleans?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
       },
       "links": [
         {
           "type": "external",
-          "url": "https://10az.online.tableau.com/t/mikeseaystableau/views/airBnB/AirBnBListingsinNewOrleans?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link"
+          "url": "https://public.tableau.com/views/airBnB_16553129535680/AirBnBListingsinNewOrleans?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
         }
       ]
     },
