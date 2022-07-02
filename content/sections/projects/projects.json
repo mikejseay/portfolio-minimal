@@ -49,12 +49,12 @@
       "image": {
         "src": "../../images/exquisite-text.jpg",
         "alt": "Extendable Layout",
-        "linkTo": "https://quiet-garden-15924.herokuapp.com/"
+        "linkTo": "https://exquisite-text-js-hub-1.herokuapp.com/"
       },
       "links": [
         {
           "type": "external",
-          "url": "https://quiet-garden-15924.herokuapp.com/"
+          "url": "https://exquisite-text-js-hub-1.herokuapp.com/"
         },
         {
           "type": "github",
