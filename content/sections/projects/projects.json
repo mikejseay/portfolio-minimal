@@ -2,6 +2,28 @@
   "projects": [
     {
       "visible": true,
+      "category": "SQL Data Analysis",
+      "title": "Database Detective: Discogs",
+      "description": "In this article, I tell the story of how I turned the world's largest online music database, Discogs, into a local SQL database on my machine. Using this database, I answer a bunch of interesting questions, make some fun top 10 lists, provide a brief history of recorded audio, and conduct a network analysis of the relationships between musical styles.",
+      "tags": ["SQL", "Tableau", "Python", "JavaScript"],
+      "image": {
+        "src": "../../images/someOfMyRecords.jpg",
+        "alt": "Discogs DB",
+        "linkTo": "/db-detective-discogs"
+      },
+      "links": [
+        {
+          "type": "external",
+          "url": "/db-detective-discogs"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/mikejseay/discogs-xml2db"
+        }
+      ]
+    },
+    {
+      "visible": true,
       "category": "Scientific Data Management",
       "title": "HBNL Database",
       "description": "While working at a lab in Brooklyn, I co-wrote a Python module for building, updating, and accessing a lab database implemented in MongoDB. Still used today, it contains hundreds of thousands of records from disparate sources (EEG, behavioral experiment, survey, genetics, genealogy).",

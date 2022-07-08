@@ -1,0 +1,9 @@
+.my-vis-container {
+    display: flex;
+    justify-content: center;
+}
+
+.vis-network {
+    margin: 0 auto 1em auto;
+    border: 1px solid black;
+}
