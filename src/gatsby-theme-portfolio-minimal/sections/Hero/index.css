@@ -1,0 +1,21 @@
+.my-horizontal-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.my-horizontal-element {
+}
+
+.my-vis-container {
+    display: flex;
+    justify-content: center;
+    width: 516px;
+}
+
+.my-vis-caption {
+    text-align: center;
+}
+
+.vis-network {
+    margin: 0;
+}

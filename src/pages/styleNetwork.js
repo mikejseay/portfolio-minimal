@@ -3,16 +3,10 @@ import {Page, Seo} from 'gatsby-theme-portfolio-minimal';
 import Graph from "react-graph-vis";
 import './styleNetwork.css';
 
-// import genreNodes from "../../content/data/genreNodes.json"
-// import genreEdges from "../../content/data/genreEdges.json"
 import styleNodes from "../../content/data/styleNodes.json"
 import styleEdges from "../../content/data/styleEdges.json"
 
 export default function StyleNetwork() {
-    // const genreGraph = {
-    //     nodes: genreNodes,
-    //     edges: genreEdges,
-    // }
     const styleGraph = {
         nodes: styleNodes,
         edges: styleEdges,
