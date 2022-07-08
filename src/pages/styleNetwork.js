@@ -19,7 +19,7 @@ export default function StyleNetwork() {
     }
     const options = {
         autoResize: true,
-        width: '800px',
+        width: '1100px',
         height: '800px',
         clickToUse: true,
         edges: {

@@ -27,3 +27,28 @@ body[data-theme='darkTheme'] {
     --base-font: 'Roboto', Arial, sans-serif;
     --invert-percentage: 100%;
 }
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    border: 1px solid #222;
+}

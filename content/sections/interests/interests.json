@@ -71,7 +71,14 @@
       }
     },
     {
-      "label": "Javascript",
+      "label": "Graph Theory",
+      "image": {
+        "src": "../../images/network.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "JavaScript",
       "image": {
         "src": "../../images/javascript.png",
         "alt": ""

@@ -124,18 +124,18 @@ FROM master AS m
 
 _Result:_
 
-| **ID**    | **Title**                             | **Year** | **Releases** |
-|-----------|---------------------------------------|----------|--------------|
-| **10362** | The Dark Side Of The Moon             | 1973     | 1141         |
-| **23934** | Sgt. Pepper's Lonely Hearts Club Band | 1967     | 1052         |
-| **4300**  | Untitled                              | 1971     | 949          |
-| **24047** | Abbey Road                            | 1969     | 860          |
-| **4170**  | Led Zeppelin II                       | 1969     | 857          |
-| **11703** | Wish You Were Here                    | 1975     | 849          |
-| **45526** | Rubber Soul                           | 1965     | 817          |
-| **11329** | The Wall                              | 1979     | 781          |
-| **46402** | The Beatles                           | 1968     | 771          |
-| **45284** | Revolver                              | 1966     | 761          |
+| **ID**                                        | **Title**                             | **Year** | **Releases** |
+|-----------------------------------------------|---------------------------------------|----------|--------------|
+| [10362](https://www.discogs.com/master/10362) | The Dark Side Of The Moon             | 1973     | 1141         |
+| [23934](https://www.discogs.com/master/23934) | Sgt. Pepper's Lonely Hearts Club Band | 1967     | 1052         |
+| [4300](https://www.discogs.com/master/4300)   | Untitled                              | 1971     | 949          |
+| [24047](https://www.discogs.com/master/24047) | Abbey Road                            | 1969     | 860          |
+| [4170](https://www.discogs.com/master/4170)   | Led Zeppelin II                       | 1969     | 857          |
+| [11703](https://www.discogs.com/master/11703) | Wish You Were Here                    | 1975     | 849          |
+| [45526](https://www.discogs.com/master/45526) | Rubber Soul                           | 1965     | 817          |
+| [11329](https://www.discogs.com/master/11329) | The Wall                              | 1979     | 781          |
+| [46402](https://www.discogs.com/master/46402) | The Beatles                           | 1968     | 771          |
+| [45284](https://www.discogs.com/master/45284) | Revolver                              | 1966     | 761          |
 
 As you can see, this list is dominated by the titans of classic rock: Pink Floyd, The Beatles, and Led Zeppelin. The albums have become culturally iconic not only for the music but also the cover art. You also probably noticed that all of these albums were released in the '60s and '70s, which means they benefit from having had up to fifty years to be reissued. By the way, if you didn't recognize the album called _Untitled_, that's the official name of Led Zeppelin's fourth studio album, which most people call _Led Zeppelin IV_. But Pink Floyd's _The Dark Side of the Moon_ takes home first prize. _Dark Side_ has been released in over fifty countries, on eight media formats, and in association with over a hundred companies. The query that returns this result is shown below
 
@@ -194,18 +194,18 @@ LIMIT 10;
 
 _Result:_
 
-| **ID**      | **Title**                             | **Year** | **Releases** | **Year Norm** |
-|-------------|---------------------------------------|----------|--------------|---------------|
-| **10362**   | The Dark Side Of The Moon             | 1973     | 1141         | 18.11         |
-| **1268453** | Polygondwanaland                      | 2017     | 336          | 17.68         |
-| **23934**   | Sgt. Pepper's Lonely Hearts Club Band | 1967     | 1052         | 15.25         |
-| **13814**   | Nevermind                             | 1991     | 685          | 15.22         |
-| **4300**    | Untitled                              | 1971     | 949          | 14.60         |
-| **11703**   | Wish You Were Here                    | 1975     | 849          | 13.92         |
-| **11329**   | The Wall                              | 1979     | 781          | 13.70         |
-| **24047**   | Abbey Road                            | 1969     | 860          | 12.84         |
-| **4170**    | Led Zeppelin II                       | 1969     | 857          | 12.79         |
-| **8883**    | Thriller                              | 1982     | 636          | 11.78         |
+| **ID**                                            | **Title**                             | **Year** | **Releases** | **Year Norm** |
+|---------------------------------------------------|---------------------------------------|----------|--------------|---------------|
+| [10362](https://www.discogs.com/master/10362)     | The Dark Side Of The Moon             | 1973     | 1141         | 18.11         |
+| [1268453](https://www.discogs.com/master/1268453) | Polygondwanaland                      | 2017     | 336          | 17.68         |
+| [23934](https://www.discogs.com/master/23934)     | Sgt. Pepper's Lonely Hearts Club Band | 1967     | 1052         | 15.25         |
+| [13814](https://www.discogs.com/master/13814)     | Nevermind                             | 1991     | 685          | 15.22         |
+| [4300](https://www.discogs.com/master/4300)       | Untitled                              | 1971     | 949          | 14.60         |
+| [11703](https://www.discogs.com/master/11703)     | Wish You Were Here                    | 1975     | 849          | 13.92         |
+| [11329](https://www.discogs.com/master/11329)     | The Wall                              | 1979     | 781          | 13.70         |
+| [24047](https://www.discogs.com/master/24047)     | Abbey Road                            | 1969     | 860          | 12.84         |
+| [4170](https://www.discogs.com/master/4170)       | Led Zeppelin II                       | 1969     | 857          | 12.79         |
+| [8883](https://www.discogs.com/master/8883)       | Thriller                              | 1982     | 636          | 11.78         |
 
 Normalizing this way adds a lot more diversity to the list. Nirvana's _Nevermind_ was released relatively recently in 1991, but it's still managed to rack up 685 releases since then, and Michael Jackson's _Thriller_ scored 636 releases since its 1982 debut.
 
@@ -236,18 +236,18 @@ FROM
 
 _Result:_
 
-| **ID**     | **Name**                      |  **masters** |
-|------------|-------------------------------|--------------|
-| **95546**  | Wolfgang Amadeus Mozart       | 5951         |
-| **95544**  | Ludwig van Beethoven          | 5413         |
-| **95537**  | Johann Sebastian Bach         | 4984         |
-| **999914** | Pyotr Ilyich Tchaikovsky      | 2738         |
-| **283469** | Franz Schubert                | 2498         |
-| **304975** | Johannes Brahms               | 2455         |
-| **108568** | Joseph Haydn                  | 2147         |
-| **262940** | The London Symphony Orchestra | 1957         |
-| **192325** | Frédéric Chopin               | 1785         |
-| **27518**  | Elvis Presley                 | 1666         |
+| **ID**                                          | **Name**                      |  **masters** |
+|-------------------------------------------------|-------------------------------|--------------|
+| [95546](https://www.discogs.com/artist/95546)   | Wolfgang Amadeus Mozart       | 5951         |
+| [95544](https://www.discogs.com/artist/95544)   | Ludwig van Beethoven          | 5413         |
+| [95537](https://www.discogs.com/artist/95537)   | Johann Sebastian Bach         | 4984         |
+| [999914](https://www.discogs.com/artist/999914) | Pyotr Ilyich Tchaikovsky      | 2738         |
+| [283469](https://www.discogs.com/artist/283469) | Franz Schubert                | 2498         |
+| [304975](https://www.discogs.com/artist/304975) | Johannes Brahms               | 2455         |
+| [108568](https://www.discogs.com/artist/108568) | Joseph Haydn                  | 2147         |
+| [262940](https://www.discogs.com/artist/262940) | The London Symphony Orchestra | 1957         |
+| [192325](https://www.discogs.com/artist/192325) | Frédéric Chopin               | 1785         |
+| [27518](https://www.discogs.com/artist/27518)   | Elvis Presley                 | 1666         |
 
 In the case of most distinct albums by artist, classical composers dominate. The reason for this is threefold: First, they were genuinely prolific – not being limited by the speed of recording but by how quickly they could write their compositions onto paper. Secondly, their compositions have been recorded and released essentially since the dawn of recorded audio in the late 19th century. And finally, because the copyright duration of composed music only lasts 70 years beyond the author's death, their works are all in the public domain. This means that their works can be freely used and recorded by any number of musicians, and there is no 'definitive' recording of any of their compositions. Still, the King rounds out this list at spot #10.
 
@@ -276,18 +276,18 @@ ORDER BY variations DESC;
 
 _Result:_
 
-| **ID**     |  **Name**                                       | **Variations** |
-|------------|-------------------------------------------------|----------------|
-| **151641** | Traditional                                     | 10420          |
-| **320156** | Folk                                            | 6334           |
-| **967691** | Anonymous                                       | 2134           |
-| **999914** | Pyotr Ilyich Tchaikovsky                        | 1044           |
-| **779927** | Lennon-McCartney                                | 918            |
-| **746270** | Robin Gibb, Barry Gibb &amp; Maurice Gibb       | 908            |
-| **838295** | Большой Симфонический Оркестр Всесоюзного Радио | 872            |
-| **476910** | Holland-Dozier-Holland                          | 825            |
-| **142502** | Bacharach And David                             | 602            |
-| **975170** | Björn Ulvaeus &amp; Benny Andersson             | 599            |
+| **ID**                                          |  **Name**                                       | **Variations** |
+|-------------------------------------------------|-------------------------------------------------|----------------|
+| [151641](https://www.discogs.com/artist/151641) | Traditional                                     | 10420          |
+| [320156](https://www.discogs.com/artist/320156) | Folk                                            | 6334           |
+| [967691](https://www.discogs.com/artist/967691) | Anonymous                                       | 2134           |
+| [999914](https://www.discogs.com/artist/999914) | Pyotr Ilyich Tchaikovsky                        | 1044           |
+| [779927](https://www.discogs.com/artist/779927) | Lennon-McCartney                                | 918            |
+| [746270](https://www.discogs.com/artist/746270) | Robin Gibb, Barry Gibb &amp; Maurice Gibb       | 908            |
+| [838295](https://www.discogs.com/artist/838295) | Большой Симфонический Оркестр Всесоюзного Радио | 872            |
+| [476910](https://www.discogs.com/artist/476910) | Holland-Dozier-Holland                          | 825            |
+| [142502](https://www.discogs.com/artist/142502) | Bacharach And David                             | 602            |
+| [975170](https://www.discogs.com/artist/975170) | Björn Ulvaeus &amp; Benny Andersson             | 599            |
 
 This analysis tells us a few things. First, Discogs uses name variations to keep track of the different ways people refer to 'Traditional' and 'Folk' music (i.e. music that has been handed down in a culture) as well as 'Anonymous' music, when the identity of the artist is not known.
 
@@ -319,13 +319,13 @@ LIMIT 5;
 
 _Result:_
 
-| **ID**      | **Title**                    | **released** | **country** |
-|-------------|------------------------------|--------------|-------------|
-| **1289378** | Au Clair De La Lune          | 1860         | France      |
-| **5695167** | Experimental Talking Clock   | 1878         | US          |
-| **8532114** | Mary Had A Little Lamb       | 1878         | US          |
-| **4275659** | A Little Ship Was On The Sea | 1889         | Germany     |
-| **2583289** | Electric Light Quadrille     | 1889         | US          |
+| **ID**                                             | **Title**                    | **Released** | **Country** |
+|----------------------------------------------------|------------------------------|--------------|-------------|
+| [1289378](https://www.discogs.com/release/1289378) | Au Clair De La Lune          | 1860         | France      |
+| [5695167](https://www.discogs.com/release/5695167) | Experimental Talking Clock   | 1878         | US          |
+| [8532114](https://www.discogs.com/release/8532114) | Mary Had A Little Lamb       | 1878         | US          |
+| [4275659](https://www.discogs.com/release/4275659) | A Little Ship Was On The Sea | 1889         | Germany     |
+| [2583289](https://www.discogs.com/release/2583289) | Electric Light Quadrille     | 1889         | US          |
 
 Recorded audio begins with Édouard-Léon Scott de Martinville, who invented a device he called the phonautograph in 1857. It funneled sound through a cone onto a vibrating membrane attached to a stylus, which would then trace the membrane's vibrations onto a rotating cylinder covered with soot. In 1860, Scott recorded part of a French folk song titled 'Au Clair de la Lune,' which remains the earliest clearly recognizable record of the human voice. However, because he didn't have a method of playing back the recording, it wasn't until 2008 that researchers were able to scan the cylinder to convert the recording into audio.
 
@@ -476,7 +476,9 @@ To carry out the rest of this analysis and visualize the results, I used Python 
 5. Export the node and edge information into JSON files.
 6. Import the JSON files and visualize the graphs in the browser using `vis-network`.
 
-This provides an interactive visualization in which you can zoom, move nodes, and play to your heart's content. Please check it out using <a href="/styleNetwork" target="_blank">this link</a>!
+This provides an interactive visualization in which you can zoom, move nodes, and play to your heart's content. Please check it out using <a href="/styleNetwork" target="_blank">this link</a> or click the picture below!
+
+<a href="/styleNetwork" target="_blank">![A network representation of musical styles on Discogs](styleNetworkSnapshot.png "Discogs Style Network")</a>
 
 ## Chapter 5: Questions and answers, pt. 2  <a name='ch5'></a>
 
@@ -523,18 +525,18 @@ ORDER BY instances DESC;
 
 _Result:_
 
-|  **ID**    | **Name**        | **groups** |
-|------------|-----------------|------------|
-| **837308** | Frankie Fischer | 255        |
-| **323273** | Beat Paul       | 229        |
-| **261485** | Robert Pollard  | 170        |
-| **113541** | Tony Varone     | 156        |
-| **154973** | Mauro Farina    | 147        |
-| **258461** | Milt Hinton     | 132        |
-| **84265**  | Richard Ramirez | 131        |
-| **402016** | Peter Peyskens  | 118        |
-| **261765** | J.P. Bulté      | 116        |
-| **265354** | Shelly Manne    | 115        |
+| **ID**                                          | **Name**        | **groups** |
+|-------------------------------------------------|-----------------|------------|
+| [837308](https://www.discogs.com/artist/837308) | Frankie Fischer | 255        |
+| [323273](https://www.discogs.com/artist/323273) | Beat Paul       | 229        |
+| [261485](https://www.discogs.com/artist/261485) | Robert Pollard  | 170        |
+| [113541](https://www.discogs.com/artist/113541) | Tony Varone     | 156        |
+| [154973](https://www.discogs.com/artist/154973) | Mauro Farina    | 147        |
+| [258461](https://www.discogs.com/artist/258461) | Milt Hinton     | 132        |
+| [84265](https://www.discogs.com/artist/84265)   | Richard Ramirez | 131        |
+| [402016](https://www.discogs.com/artist/402016) | Peter Peyskens  | 118        |
+| [261765](https://www.discogs.com/artist/261765) | J.P. Bulté      | 116        |
+| [265354](https://www.discogs.com/artist/265354) | Shelly Manne    | 115        |
 
 To be honest, I hadn't heard of anyone on this list except for Robert Pollard, who is best known for being the leader of the indie rock band Guided by Voices. The characteristic that unites most people on this list is that they can't decide on what to name their musical projects, with most 'groups' that they belong to consisting of similar people but being named differently. Several are electronic music producers that fall into this category. The rest of them genuinely were members of many groups, including a few jazz musicians.
 
@@ -606,18 +608,18 @@ FROM
 
 _Result:_
 
-|  **ID**     | **Name**                             | **Avg. Releases Per Master** |
-|-------------|--------------------------------------|------------------------------|
-| **1566346** | Miles Davis + 19                     | 130                          |
-| **8037935** | Arthur Gordon Smith                  | 115                          |
-| **317886**  | The Ornette Coleman Double Quartet   | 97                           |
-| **269863**  | The New Stan Getz Quartet            | 95                           |
-| **9065947** | South Pacific Original Broadway Cast | 94                           |
-| **2169761** | Joshua Logan                         | 94                           |
-| **12590**   | MARRS                                | 92                           |
-| **3753336** | Friends Of Veit Marvos               | 87                           |
-| **854869**  | Janice Harsanyi                      | 85                           |
-| **310407**  | The Confederates                     | 78                           |
+| **ID**                                            | **Name**                             | **Avg. Releases Per Master** |
+|---------------------------------------------------|--------------------------------------|------------------------------|
+| [1566346](https://www.discogs.com/artist/1566346) | Miles Davis + 19                     | 130                          |
+| [8037935](https://www.discogs.com/artist/8037935) | Arthur Gordon Smith                  | 115                          |
+| [317886](https://www.discogs.com/artist/317886)   | The Ornette Coleman Double Quartet   | 97                           |
+| [269863](https://www.discogs.com/artist/269863)   | The New Stan Getz Quartet            | 95                           |
+| [9065947](https://www.discogs.com/artist/9065947) | South Pacific Original Broadway Cast | 94                           |
+| [2169761](https://www.discogs.com/artist/2169761) | Joshua Logan                         | 94                           |
+| [12590](https://www.discogs.com/artist/12590)     | MARRS                                | 92                           |
+| [3753336](https://www.discogs.com/artist/3753336) | Friends Of Veit Marvos               | 87                           |
+| [854869](https://www.discogs.com/artist/854869)   | Janice Harsanyi                      | 85                           |
+| [310407](https://www.discogs.com/artist/310407)   | The Confederates                     | 78                           |
 
 This question is a little ridiculous, but I was trying to exercise my SQL skills. Nevertheless, I thought this question had a slightly unexpected answer. It turned out to be sensitive to the phenomenon known as 'one and done.' Most of these 'artists' were groups that were assembled in order to produce exactly one album that turned out to be a smash hit, and the groups never made another album after that. Now that's efficient!
 
@@ -705,16 +707,16 @@ ORDER BY q2.max_qty DESC;
 
 _Results:_
 
-|  **ID**      |  **Format** |  **Quantity** |  **Artist**           | **Title**                                            |
-|--------------|-------------|---------------|-----------------------|------------------------------------------------------|
-| **22838444** | File        | 6^188         | Default-artist        | Defaultest 93                                        |
-| **14899813** | CD          | 330           | Herbert von Karajan   | Complete Recordings On Deutsche Grammophon           |
-| **14845673** | Vinyl       | 112           | Ludwig van Beethoven  | Gesamtausgabe / Complete Edition - 112 LPs           |
-| **15600765** | Box Set     | 101           | Herbert von Karajan   | Karajan Complete EMI/Warner Classics Recordings      |
-| **11437370** | Cassette    | 85            | DJ Greidor            | The Best Hardmasterzz Collection (1996-2003)         |
-| **13096191** | CDr         | 80            | Necrotik Fissure      | Vertigo Dokumentary                                  |
-| **12250217** | SACD        | 55            | Johann Sebastian Bach | The Sacred Cantatas                                  |
-| **7755579**  | DVD         | 41            | The Beatles           | Film And TV Chronicle 1962 - 1970 Definitive Edition |
+| **ID**                                               |  **Format** |  **Quantity** |  **Artist**           | **Title**                                            |
+|------------------------------------------------------|-------------|---------------|-----------------------|------------------------------------------------------|
+| [22838444](https://www.discogs.com/release/22838444) | File        | 6^188         | Default-artist        | Defaultest 93                                        |
+| [14899813](https://www.discogs.com/release/14899813) | CD          | 330           | Herbert von Karajan   | Complete Recordings On Deutsche Grammophon           |
+| [14845673](https://www.discogs.com/release/14845673) | Vinyl       | 112           | Ludwig van Beethoven  | Gesamtausgabe / Complete Edition - 112 LPs           |
+| [15600765](https://www.discogs.com/release/15600765) | Box Set     | 101           | Herbert von Karajan   | Karajan Complete EMI/Warner Classics Recordings      |
+| [11437370](https://www.discogs.com/release/11437370) | Cassette    | 85            | DJ Greidor            | The Best Hardmasterzz Collection (1996-2003)         |
+| [13096191](https://www.discogs.com/release/13096191) | CDr         | 80            | Necrotik Fissure      | Vertigo Dokumentary                                  |
+| [12250217](https://www.discogs.com/release/12250217) | SACD        | 55            | Johann Sebastian Bach | The Sacred Cantatas                                  |
+| [7755579](https://www.discogs.com/release/7755579)   | DVD         | 41            | The Beatles           | Film And TV Chronicle 1962 - 1970 Definitive Edition |
 
 This one was a lot of work for multiple reasons. First, the 'quantity' field is often misused by users on Discogs, who mistakenly think it refers to the number of copies made for sale. Instead, quantity is supposed to refer to the number of pieces of media in _each_ copy made for sale. I applied liberal amounts of elbow grease here and with the help of some clever querying I was able to correct releases with incorrect quantity values in order to determine the release in each format with the highest legitimate quantity.
 
