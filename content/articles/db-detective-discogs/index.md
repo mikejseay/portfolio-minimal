@@ -31,6 +31,7 @@ keywords:
 3. [Chapter 3: A brief history of recorded audio, as told by Discogs](#ch3)
 4. [Chapter 4: A galaxy of genres, a sea of styles](#ch4)
 5. [Chapter 5: Questions and answers, pt. 2](#ch5)
+6. [Chapter 6: Conclusion](#ch6)
 
 ## Chapter 1: Building the database <a name='ch1'></a>
 
@@ -74,7 +75,7 @@ My discogs database was ready to investigate! Or so I thought.
 
 I went through each column in each table and wrote a small guide to reference as I did my analyses. In doing so, I identified a few issues. First, a couple columns contained useless information, so I dropped them. A couple more columns were fully `NULL` and didn't seem useful based on their names, so I dropped them. Finally, a couple columns had names implying they should have contained useful information, but all of the values were `NULL`.
 
-Luckily due to some redundancy the database contained enough information to fill in what was missing in some cases. For example, I was able to fill in the fully-`NULL` `release_label.label_id` (a one-to-many foreign key of `label.id`) based on the equivalence of `release_label.label_name` and `label.name`. And I was able to set the value of the fully-`NULL` `release.main` to signify that a given release was the 'main' release amongst its versions using `master.main_release`. Performing these quality checks removed distracting information and allowed me to be as confident as possible that the database was correct.
+Luckily due to some redundancy the database contained enough information to fill in what was missing in some cases. For example, I was able to fill in the fully-`NULL` `release_label.label_id` (a one-to-many foreign key of `label.id`) based on the equivalence of `release_label.label_name` and `label.name`. And I was able to set the value of the fully-`NULL` `release.main` to signify that a given release was the "main" release amongst its versions using `master.main_release`. Performing these quality checks removed distracting information and allowed me to be as confident as possible that the database was correct.
 
 As I scanned over the guide I had written about the tables and their columns, my mind flooded with questions that could be answered with the dataset. I wrote my questions down, and one by one I began writing queries to answer each question.
 
@@ -96,7 +97,7 @@ Just a quick technical note before we get started: the Discogs database contains
 
 ### What master recording has had the most releases?
 
-To make this clearer, I should explain that Discogs not only tracks different recordings, but it also keeps track of the multiple _releases_ of the same recording. Why should a recording have multiple releases? For example, this occurs when it's released in different regions, on different record labels, on multiple audio formats, or when it's reissued. But for any recording with multiple releases, there is only one 'master,' which refers to the original recording from which all of the copies are made.
+To make this clearer, I should explain that Discogs not only tracks different recordings, but it also keeps track of the multiple _releases_ of the same recording. Why should a recording have multiple releases? For example, this occurs when it's released in different regions, on different record labels, on multiple audio formats, or when it's reissued. But for any recording with multiple releases, there is only one "master," which refers to the original recording from which all of the copies are made.
 
 Since the Discogs database links each release to its master recording, we can ask: What master recording has had the most releases? As I go, I'll include the SQL query in a collapsible section if you're interested:
 
@@ -166,7 +167,7 @@ FROM
 ```
 </details>
 
-Obviously the previous analysis is biased by the amount of time since the initial release. The longer it's been since an album was first released, the more re-releases it should have. What if we normalize the number of releases by the number of years since the initial release? We could call the quantifier 'releases per year since initial release,' but I'll also add a constant of 14 years into the denominator, which accomplishes two things: 1) It prevents a division by zero error for albums released this year, and 2) It prevents albums released recently from dominating the analysis.
+Obviously the previous analysis is biased by the amount of time since the initial release. The longer it's been since an album was first released, the more re-releases it should have. What if we normalize the number of releases by the number of years since the initial release? We could call the quantifier "releases per year since initial release," but I'll also add a constant of 14 years into the denominator, which accomplishes two things: 1) It prevents a division by zero error for albums released this year, and 2) It prevents albums released recently from dominating the analysis.
 
 <details>
     <summary>SQL Query</summary>
@@ -236,20 +237,20 @@ FROM
 
 _Result:_
 
-| **ID**                                          | **Name**                      |  **masters** |
-|-------------------------------------------------|-------------------------------|--------------|
-| [95546](https://www.discogs.com/artist/95546)   | Wolfgang Amadeus Mozart       | 5951         |
-| [95544](https://www.discogs.com/artist/95544)   | Ludwig van Beethoven          | 5413         |
-| [95537](https://www.discogs.com/artist/95537)   | Johann Sebastian Bach         | 4984         |
-| [999914](https://www.discogs.com/artist/999914) | Pyotr Ilyich Tchaikovsky      | 2738         |
-| [283469](https://www.discogs.com/artist/283469) | Franz Schubert                | 2498         |
-| [304975](https://www.discogs.com/artist/304975) | Johannes Brahms               | 2455         |
-| [108568](https://www.discogs.com/artist/108568) | Joseph Haydn                  | 2147         |
-| [262940](https://www.discogs.com/artist/262940) | The London Symphony Orchestra | 1957         |
-| [192325](https://www.discogs.com/artist/192325) | Frédéric Chopin               | 1785         |
-| [27518](https://www.discogs.com/artist/27518)   | Elvis Presley                 | 1666         |
+| **ID**                                          | **Name**                      | **Masters** |
+|-------------------------------------------------|-------------------------------|-------------|
+| [95546](https://www.discogs.com/artist/95546)   | Wolfgang Amadeus Mozart       | 5951        |
+| [95544](https://www.discogs.com/artist/95544)   | Ludwig van Beethoven          | 5413        |
+| [95537](https://www.discogs.com/artist/95537)   | Johann Sebastian Bach         | 4984        |
+| [999914](https://www.discogs.com/artist/999914) | Pyotr Ilyich Tchaikovsky      | 2738        |
+| [283469](https://www.discogs.com/artist/283469) | Franz Schubert                | 2498        |
+| [304975](https://www.discogs.com/artist/304975) | Johannes Brahms               | 2455        |
+| [108568](https://www.discogs.com/artist/108568) | Joseph Haydn                  | 2147        |
+| [262940](https://www.discogs.com/artist/262940) | The London Symphony Orchestra | 1957        |
+| [192325](https://www.discogs.com/artist/192325) | Frédéric Chopin               | 1785        |
+| [27518](https://www.discogs.com/artist/27518)   | Elvis Presley                 | 1666        |
 
-In the case of most distinct albums by artist, classical composers dominate. The reason for this is threefold: First, they were genuinely prolific – not being limited by the speed of recording but by how quickly they could write their compositions onto paper. Secondly, their compositions have been recorded and released essentially since the dawn of recorded audio in the late 19th century. And finally, because the copyright duration of composed music only lasts 70 years beyond the author's death, their works are all in the public domain. This means that their works can be freely used and recorded by any number of musicians, and there is no 'definitive' recording of any of their compositions. Still, the King rounds out this list at spot #10.
+In the case of most distinct albums by artist, classical composers dominate. The reason for this is threefold: First, they were genuinely prolific – not being limited by the speed of recording but by how quickly they could write their compositions onto paper. Secondly, their compositions have been recorded and released essentially since the dawn of recorded audio in the late 19th century. And finally, because the copyright duration of composed music only lasts 70 years beyond the author's death, their works are all in the public domain. This means that their works can be freely used and recorded by any number of musicians, and there is no "definitive" recording of any of their compositions. Still, the King rounds out this list at spot #10.
 
 ### What artist has the most name variations?
 
@@ -295,7 +296,7 @@ Second, this analysis tells us that people really, really cannot agree on how to
 
 Finally, this analysis tells us that record companies also can't agree on how to spell the name of songwriting teams (e.g. Lennon-McCartney vs. Lennon &amp; McCartney). The songwriting teams that made this list are the ones behind the Beatles (Lennon-McCartney), the Bee Gees (the Gibb brothers), Motown Records (Holland-Dozier-Holland), ABBA (Björn Ulvaeus &amp; Benny Andersson), and the songwriting duo of Burt Bacharach and Hal David.
 
-Now that we've answered a few basic 'Top 10'-style questions let's move on to a different topic. I'll answer even more questions in the final chapter.
+Now that we've answered a few basic "Top 10"-style questions let's move on to a different topic. I'll answer even more questions in the final chapter.
 
 ## Chapter 3: A brief history of recorded audio, as told by Discogs  <a name='ch3'></a>
 
@@ -339,11 +340,11 @@ By the 1890s, phonograph and gramophone-inspired recording techniques began to t
 
 ### The rise and fall of audio formats
 
-In 1948, Columbia introduced 12-inch-diameter discs made of polyvinyl chloride acetate, or simply vinyl. With smaller grooves and a slower rotation speed of 33⅓ RPM, they could be played for much longer and became known as 'long-play' records or LPs. The following year, RCA Victor introduced 7-inch-diameter vinyl records designed to be played at 45 RPM, which became referred to as simply "45's". These two vinyl formats – the 12-inch LP and the 7-inch 45 – went on to become the dominant forms of commercially-available audio media for nearly thirty years until the rise of cassettes in the late 70's and the introduction of CDs in the late 80's.
+In 1948, Columbia introduced 12-inch-diameter discs made of polyvinyl chloride acetate, or simply vinyl. With smaller grooves and a slower rotation speed of 33⅓ RPM, they could be played for much longer and became known as "long-play" records or LPs. The following year, RCA Victor introduced 7-inch-diameter vinyl records designed to be played at 45 RPM, which became referred to as simply "45's". These two vinyl formats – the 12-inch LP and the 7-inch 45 – went on to become the dominant forms of commercially-available audio media for nearly thirty years until the rise of cassettes in the late 70's and the introduction of CDs in the late 80's.
 
 Around 2010, digital distribution of music files became the predominant form of music releases via services like iTunes, Spotify, and Apple Music. Interestingly, while CDs continue to fall in popularity, vinyl and cassette releases have actually _increased_ since around 2010, signaling a revival of interest in and demand for analog formats.
 
-Because Discogs tracks the format of each release and the year it was released, we can query this information and visualize the results using Tableau. To do so, I connected my Tableau application directly to my local PostgreSQL database and used a custom SQL query as a data source. The query that returns the number of releases by year and format takes a relatively long amount of time (about 24 seconds) but the result is very small in terms of space on disk, so I used an 'extract' connection on the data source. This means the query only needs to be evaluated once, and subsequent sort/filter steps applied in Tableau will not cause it to be re-evaluated, saving a massive amount of time. However, if the database were to be updated, the extraction would need to be repeated to update the data source.
+Because Discogs tracks the format of each release and the year it was released, we can query this information and visualize the results using Tableau. To do so, I connected my Tableau application directly to my local PostgreSQL database and used a custom SQL query as a data source.
 
 <details>
     <summary>SQL Query</summary>
@@ -368,7 +369,7 @@ GROUP BY q1.format, q1.released_year;
 ```
 </details>
 
-To visualize this information, I chose an 'area' graph because it not only shows both the rise and fall of each format and also the overall increase in musical releases per year.
+To visualize this information, I chose an "area" graph because it not only shows both the rise and fall of each format but also the overall increase in musical releases per year.
 
 <iframe
 title="Tableau Viz"
@@ -400,7 +401,7 @@ The better-known but ultimately-unsuccessful tape format was the 8-Track Cartrid
 
 Flexi-disc was a type of vinyl disc record that was much thinner and more flexible than normal vinyl discs. Their flexibility meant that flexi-discs could be bound inside of magazines and booklets yet still be played on normal record players. Flexi-discs filled this niche from around 1960 to 1990 until the CD exploded in popularity and became the preferred format for including recorded audio in print media. Interestingly, flexi-discs have seen a resurgence in popularity beginning in 2010.
 
-Lathe-cut records are discs in which the groove is cut by rotating the disc underneath a needle, instead of pressing the groove into hot vinyl with a metal stamper. Lathes have been used since at least the 1920s to cut the single 'master' record (typically onto a lacquer-coated aluminum disc) from which a negative-image metal stamper is created in order to mass-produce pressed records. But in the past decade, lathes have been used to cut polycarbonate discs for small record runs (e.g. less than 200 records). This has become a popular technique among independent record labels and artists that embrace the 'do it yourself' mantra.
+Lathe-cut records are discs in which the groove is cut by rotating the disc underneath a needle, instead of pressing the groove into hot vinyl with a metal stamper. Lathes have been used since at least the 1920s to cut the single "master" record (typically onto a lacquer-coated aluminum disc) from which a negative-image metal stamper is created in order to mass-produce pressed records. But in the past decade, lathes have been used to cut polycarbonate discs for small record runs (e.g. less than 200 records). This has become a popular technique among independent record labels and artists that embrace the "do it yourself" mantra.
 
 Finally, the MiniDisc and Super Audio CD (SACD) formats were designed to improve upon cassettes and CDs, but they weren't accepted by the mainstream market. Introduced in 1992, MiniDiscs were impressively small at about 3 x 3 inches, could be made and edited quickly, and had superior anti-skip technology compared to CDs. Introduced in 1999, SACD allowed surround sound and higher audio quality compared to CDs. Although these technical advantages weren't enough to allow MiniDiscs or SACDs to achieve major commercial success, neither format is completely dead. SACDs continue to be released, and MiniDisc has experienced a small revival.
 
@@ -438,7 +439,7 @@ It may surprise you to see that House music is the style with the most releases.
 
 ### Building a map of stylistic space
 
-While the previous analysis was interesting, I wasn't satisfied. One of the coolest things about musical styles is their interconnectedness. As a style flourishes, individuals working within the style innovate new sub-styles, which go on to spawn their own sub-styles, forming a 'family tree' of music. I wanted to find a way to visualize this fact using the Discogs database. From an analytical perspective, this turned out to be tricky, but the final result was beautiful.
+While the previous analysis was interesting, I wasn't satisfied. One of the coolest things about musical styles is their interconnectedness. As a style flourishes, individuals working within the style innovate new sub-styles, which go on to spawn their own sub-styles, forming a "family tree" of music. I wanted to find a way to visualize this fact using the Discogs database. From an analytical perspective, this turned out to be tricky, but the final result was beautiful.
 
 To visualize the interconnectedness of genres and styles, I focused on the concept of co-occurrence. You see, releases submitted to Discogs are required to be tagged with at least one genre and style, but many releases are tagged with multiple genres and styles. If one release is tagged with two different styles – say, Psychedelic Rock and Prog Rock – it probably means the two styles are related in some way. And by knowing how related each pair of genres or each pair of styles was, I could begin to build a map of stylistic space in music.
 
@@ -465,7 +466,7 @@ Now that I knew how connected the genres and styles were, it was time to build a
 
 Once I'd built my first graph, I encountered the final challenge in this analysis. To put it succinctly, genres and styles are a little **too** connected. In fact, every genre co-occurred with every other genre at least once. For the case of genres, this doesn't cause major issues because the graph only has 15 nodes and 105 edges. But the visualization of this kind of graph isn't very informative; it simply looks like an overly-complicated spiderweb. And for the case of the 602 styles, each style co-occurred with about 25% of the other styles resulting in a graph with a staggering 45000+ edges. Not only will this look like a mess, but attempting to visualize such a graph will crash most computers.
 
-Fortunately, there are methods for 'pruning' graphs. Naively, one may imagine that an effective way of pruning graphs would be to simply delete any edges whose weight is beneath a certain threshold value. While this can be effective, the choice of weight threshold is arbitrary, and it often results in disconnected graphs. Instead, I chose to find the so-called [maximum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of the graph. Put simply, the maximum spanning tree is the smallest set of edges that connects all of the nodes in the graph while having the largest sum of edge weights. In other words, the maximum spanning tree is as sparse as possible (fewest connections) while keeping everything connected, but the connections that are included are the strongest – and hopefully the most meaningful.
+Fortunately, there are methods for "pruning" graphs. Naively, one may imagine that an effective way of pruning graphs would be to simply delete any edges whose weight is beneath a certain threshold value. While this can be effective, the choice of weight threshold is arbitrary, and it often results in disconnected graphs. Instead, I chose to find the so-called [maximum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of the graph. Put simply, the maximum spanning tree is the smallest set of edges that connects all of the nodes in the graph while having the largest sum of edge weights. In other words, the maximum spanning tree is as sparse as possible (fewest connections) while keeping everything connected, but the connections that are included are the strongest – and hopefully the most meaningful.
 
 To carry out the rest of this analysis and visualize the results, I used Python and JavaScript. The sequence is roughly as follows:
 
@@ -474,7 +475,7 @@ To carry out the rest of this analysis and visualize the results, I used Python 
 3. Using `networkx`, construct a graph in which the nodes are genres/styles, and the edge weights are the Jaccard co-occurrences.
 4. Utilize the `networkx` function `maximum_spanning_tree` to create a pruned version of the initial graph.
 5. Export the node and edge information into JSON files.
-6. Import the JSON files and visualize the graphs in the browser using `vis-network`.
+6. Import the JSON files and visualize the graphs in the browser using [`vis-network`](https://github.com/visjs/vis-network).
 
 This provides an interactive visualization in which you can zoom, move nodes, and play to your heart's content. Please check it out using <a href="/styleNetwork" target="_blank">this link</a> or click the picture below!
 
@@ -525,7 +526,7 @@ ORDER BY instances DESC;
 
 _Result:_
 
-| **ID**                                          | **Name**        | **groups** |
+| **ID**                                          | **Name**        | **Groups** |
 |-------------------------------------------------|-----------------|------------|
 | [837308](https://www.discogs.com/artist/837308) | Frankie Fischer | 255        |
 | [323273](https://www.discogs.com/artist/323273) | Beat Paul       | 229        |
@@ -538,7 +539,7 @@ _Result:_
 | [261765](https://www.discogs.com/artist/261765) | J.P. Bulté      | 116        |
 | [265354](https://www.discogs.com/artist/265354) | Shelly Manne    | 115        |
 
-To be honest, I hadn't heard of anyone on this list except for Robert Pollard, who is best known for being the leader of the indie rock band Guided by Voices. The characteristic that unites most people on this list is that they can't decide on what to name their musical projects, with most 'groups' that they belong to consisting of similar people but being named differently. Several are electronic music producers that fall into this category. The rest of them genuinely were members of many groups, including a few jazz musicians.
+To be honest, I hadn't heard of anyone on this list except for Robert Pollard, who is best known for being the leader of the indie rock band Guided by Voices. The characteristic that unites most people on this list is that they can't decide on what to name their musical projects, with most "groups" that they belong to consisting of similar people but being named differently. Several electronic music producers fall into this category. The rest of them genuinely were members of many groups, including a few jazz musicians.
 
 ### What artist has the most aliases?
 
@@ -569,9 +570,9 @@ WHERE id IN
 ```
 </details>
 
-I can't list all the results here, but the artist with the most aliases is Caliph Mutabor, a multimedia artist and founder of the Genetic Trance label based in Ukraine. They have a total of 1529 aliases. Since each alias gets a separate page that links to nearly all of their other aliases, the Discogs website contains a total of 2.3 million links dedicated to Caliph Mutabor's aliases, which is more than all other artists combined. Some of my favorite aliases of theirs include Archetypal 21st Century Postinternet Recluse, Man of Shrek, and the value of π to 1000 digits. Many of their aliases are NSFW. The majority of them are names in which the first name starts with A, and the last name is Franklin (e.g. Abigail Franklin,) each of which has four copies.  
+I can't list all the results here, but the artist with the most aliases is [Caliph Mutabor](https://www.discogs.com/artist/3132259-Caliph-Mutabor), a multimedia artist and founder of the Genetic Trance label based in Ukraine. They have a total of 1529 aliases. Since each alias gets a separate page that links to nearly all of their other aliases, the Discogs website contains a total of 2.3 million links dedicated to Caliph Mutabor's aliases, which is more than all other artists combined. Some of my favorite aliases of theirs include Archetypal 21st Century Postinternet Recluse, Man of Shrek, and the value of π to 1000 digits. Many of their aliases are NSFW. The majority are names in which the first name starts with A, and the last name is Franklin (e.g. Abigail Franklin,) each of which has four copies.  
 
-### Which 'artists' have had the highest average number of releases per master recording?
+### Which "artists" have had the highest average number of releases per master recording?
 
 <details>
     <summary>SQL Query</summary>
@@ -621,7 +622,7 @@ _Result:_
 | [854869](https://www.discogs.com/artist/854869)   | Janice Harsanyi                      | 85                           |
 | [310407](https://www.discogs.com/artist/310407)   | The Confederates                     | 78                           |
 
-This question is a little ridiculous, but I was trying to exercise my SQL skills. Nevertheless, I thought this question had a slightly unexpected answer. It turned out to be sensitive to the phenomenon known as 'one and done.' Most of these 'artists' were groups that were assembled in order to produce exactly one album that turned out to be a smash hit, and the groups never made another album after that. Now that's efficient!
+This question is a little ridiculous, but I was trying to exercise my SQL skills. Nevertheless, I thought this question had a slightly unexpected answer. It turned out to be sensitive to the phenomenon known as "one and done." Most of these "artists" were groups that were assembled in order to produce exactly one album that turned out to be a smash hit, and the groups never made another album after that. Now that's efficient!
 
 ### What release credits the largest number of artists?
 
@@ -650,7 +651,7 @@ FROM
 
 _Result:_
 
-The audio release that credits the largest number of artists is a German audiobook recording of 'Infinite Jest' by David Foster Wallace. If recording an audiobook of an infamously long novel sounded difficult (the German translation by Ulrich Blumenbach is about 1500 pages), try using a different narrator on each page. That's what Andreas Ammer, Andreas Gerth, and Acid Pauli set out to do in 2017. But they had a clever idea to make this task easier: they crowdsourced the recording duties by creating a website through which anyone could submit a recording of a single page of the novel. To make things even more interesting, they scored the narration with constantly-evolving music produced by their 'Goldene Maschine' – a modular synthesizer with 57 modules, 172 cables, and over 200 controls.
+The audio release that credits the largest number of artists is [a German audiobook recording of _Infinite Jest_ by David Foster Wallace](https://www.discogs.com/release/23145560). If recording an audiobook of an infamously long novel sounded difficult (the German translation by Ulrich Blumenbach is about 1500 pages), try using a different narrator on each page. That's what Andreas Ammer, Andreas Gerth, and Acid Pauli set out to do in 2017. But they had a clever idea to make this task easier: they crowdsourced the recording duties by creating a website through which anyone could submit a recording of a single page of the novel. To make things even more interesting, they scored the narration with constantly-evolving music produced by their "Goldene Maschine" – a modular synthesizer with 57 modules, 172 cables, and over 200 controls.
 
 ### What release in each format had the most pieces of media?
 
@@ -723,3 +724,9 @@ This one was a lot of work for multiple reasons. First, the 'quantity' field is 
 Finding the releases in each format that have the highest quantity mainly captures large compilations of an artist's work. Here, we find several impressive releases. For example, the largest CD release is a 330-CD compilation of recordings of orchestras conducted by Herbert von Karajan, an Austrian man who was one of the most prolific but controversial conductors of the 20th century. The largest vinyl release was a 112-disc set of Beethoven. The Russian DJ Greidor apparently released an 85-cassette compilation of hard techno, and the Hungarian musician Necrotik Fissure made an 80-CDr compilation of harsh noise.
 
 First place, however, goes to Default-artist, whose digital release titled _Defaultest 93_ is an archive that when fully extracted would result in about 10188 audio files. If you made a replica of the universe for each atom in the universe, they still wouldn't contain as many atoms as this release contains audio files. In other words, it's basically zip bomb. Needless to say, you can't unzip this, and if you tried, you might mess up your computer.
+
+##Chapter 6: Conclusion
+
+And there you have it. I hope you enjoyed this whirlwind tour through the world of Discogs. I certainly did, and I learned a lot along the way. The code I used to perform this analysis can be found in my fork of [`discogs-xml2db`](https://github.com/mikejseay/discogs-xml2db). It contains my improvements and fixes to the database import process, Python code for building a network representation of musical styles, and the final JSON files containing node and edge info.
+
+As the kids say, "Thanks for coming to my TED talk."
