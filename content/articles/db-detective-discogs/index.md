@@ -725,7 +725,7 @@ Finding the releases in each format that have the highest quantity mainly captur
 
 First place, however, goes to Default-artist, whose digital release titled _Defaultest 93_ is an archive that when fully extracted would result in about 10188 audio files. If you made a replica of the universe for each atom in the universe, they still wouldn't contain as many atoms as this release contains audio files. In other words, it's basically zip bomb. Needless to say, you can't unzip this, and if you tried, you might mess up your computer.
 
-##Chapter 6: Conclusion <a name='ch6'></a>
+## Chapter 6: Conclusion <a name='ch6'></a>
 
 And there you have it. I hope you enjoyed this whirlwind tour through the world of Discogs. I certainly did, and I learned a lot along the way. The code I used to perform this analysis can be found in my fork of [`discogs-xml2db`](https://github.com/mikejseay/discogs-xml2db). It contains my improvements and fixes to the database import process, Python code for building a network representation of musical styles, and the final JSON files containing node and edge info.
 
