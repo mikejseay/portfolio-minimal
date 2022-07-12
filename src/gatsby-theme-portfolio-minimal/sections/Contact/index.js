@@ -1,9 +1,9 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Animation } from 'gatsby-theme-portfolio-minimal/src/components/Animation/index';
-import { Section } from 'gatsby-theme-portfolio-minimal/src/components/Section';
-import { SocialProfiles } from 'gatsby-theme-portfolio-minimal/src/components/SocialProfiles';
-import { useLocalDataSource } from 'gatsby-theme-portfolio-minimal/src/sections/Contact/data';
+import { Animation } from '../../components/Animation/index';
+import { Section } from '../../components/Section';
+import { SocialProfiles } from '../../components/SocialProfiles';
+import { useLocalDataSource } from './data';
 import * as classes from './style.module.css';
 
 export function ContactSection(props) {
@@ -32,6 +32,7 @@ export function ContactSection(props) {
                 {data.socialProfiles && (
                     <SocialProfiles from={data.socialProfiles.from} showIcon={data.socialProfiles.showIcons} />
                 )}
+                <div className={'smoking-gun'}>smoking gun</div>
             </Section>
         </Animation>
     );

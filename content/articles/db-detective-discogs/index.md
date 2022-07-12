@@ -708,22 +708,21 @@ ORDER BY q2.max_qty DESC;
 
 _Results:_
 
-| **ID**                                               |  **Format** |  **Quantity** |  **Artist**           | **Title**                                            |
-|------------------------------------------------------|-------------|---------------|-----------------------|------------------------------------------------------|
-| [22838444](https://www.discogs.com/release/22838444) | File        | 6^188         | Default-artist        | Defaultest 93                                        |
-| [14899813](https://www.discogs.com/release/14899813) | CD          | 330           | Herbert von Karajan   | Complete Recordings On Deutsche Grammophon           |
-| [14845673](https://www.discogs.com/release/14845673) | Vinyl       | 112           | Ludwig van Beethoven  | Gesamtausgabe / Complete Edition - 112 LPs           |
-| [15600765](https://www.discogs.com/release/15600765) | Box Set     | 101           | Herbert von Karajan   | Karajan Complete EMI/Warner Classics Recordings      |
-| [11437370](https://www.discogs.com/release/11437370) | Cassette    | 85            | DJ Greidor            | The Best Hardmasterzz Collection (1996-2003)         |
-| [13096191](https://www.discogs.com/release/13096191) | CDr         | 80            | Necrotik Fissure      | Vertigo Dokumentary                                  |
-| [12250217](https://www.discogs.com/release/12250217) | SACD        | 55            | Johann Sebastian Bach | The Sacred Cantatas                                  |
-| [7755579](https://www.discogs.com/release/7755579)   | DVD         | 41            | The Beatles           | Film And TV Chronicle 1962 - 1970 Definitive Edition |
+| **ID**                                               |  **Format** | **Quantity** |  **Artist**           | **Title**                                            |
+|------------------------------------------------------|-------------|----------|-----------------------|------------------------------------------------------|
+| [22838444](https://www.discogs.com/release/22838444) | File        | 10^188   | Default-artist        | Defaultest 93                                        |
+| [14899813](https://www.discogs.com/release/14899813) | CD          | 330      | Herbert von Karajan   | Complete Recordings On Deutsche Grammophon           |
+| [14845673](https://www.discogs.com/release/14845673) | Vinyl       | 112      | Ludwig van Beethoven  | Gesamtausgabe / Complete Edition - 112 LPs           |
+| [11437370](https://www.discogs.com/release/11437370) | Cassette    | 85       | DJ Greidor            | The Best Hardmasterzz Collection (1996-2003)         |
+| [13096191](https://www.discogs.com/release/13096191) | CDr         | 80       | Necrotik Fissure      | Vertigo Dokumentary                                  |
+| [12250217](https://www.discogs.com/release/12250217) | SACD        | 55       | Johann Sebastian Bach | The Sacred Cantatas                                  |
+| [7755579](https://www.discogs.com/release/7755579)   | DVD         | 41       | The Beatles           | Film And TV Chronicle 1962 - 1970 Definitive Edition |
 
 This one was a lot of work for multiple reasons. First, the 'quantity' field is often misused by users on Discogs, who mistakenly think it refers to the number of copies made for sale. Instead, quantity is supposed to refer to the number of pieces of media in _each_ copy made for sale. I applied liberal amounts of elbow grease here and with the help of some clever querying I was able to correct releases with incorrect quantity values in order to determine the release in each format with the highest legitimate quantity.
 
 Finding the releases in each format that have the highest quantity mainly captures large compilations of an artist's work. Here, we find several impressive releases. For example, the largest CD release is a 330-CD compilation of recordings of orchestras conducted by Herbert von Karajan, an Austrian man who was one of the most prolific but controversial conductors of the 20th century. The largest vinyl release was a 112-disc set of Beethoven. The Russian DJ Greidor apparently released an 85-cassette compilation of hard techno, and the Hungarian musician Necrotik Fissure made an 80-CDr compilation of harsh noise.
 
-First place, however, goes to Default-artist, whose digital release titled _Defaultest 93_ is an archive that when fully extracted would result in about 10188 audio files. If you made a replica of the universe for each atom in the universe, they still wouldn't contain as many atoms as this release contains audio files. In other words, it's basically zip bomb. Needless to say, you can't unzip this, and if you tried, you might mess up your computer.
+First place, however, goes to Default-artist, whose digital release titled _Defaultest 93_ is an archive that when fully extracted would result in about 6 * 10^188 audio files. If you made a replica of the universe for each atom in the universe, they still wouldn't contain as many atoms as this release contains audio files. In other words, it's basically a zip bomb. Needless to say, you can't unzip this, and if you tried, you might mess up your computer.
 
 ## Chapter 6: Conclusion <a name='ch6'></a>
 
