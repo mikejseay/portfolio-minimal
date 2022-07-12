@@ -32,7 +32,7 @@ export function ContactSection(props) {
                 {data.socialProfiles && (
                     <SocialProfiles from={data.socialProfiles.from} showIcon={data.socialProfiles.showIcons} />
                 )}
-                <div className={'smoking-gun'}>smoking gun</div>
+                <div className={'smoking-gun'}> </div>
             </Section>
         </Animation>
     );
