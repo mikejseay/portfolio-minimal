@@ -55,7 +55,7 @@ export default function StyleNetwork() {
         <>
             <Seo title="StyleNetwork Page"/>
             <Page>
-                <div className={'my-vis-container'}>
+                <div className={'my-vis-container-style'}>
                     <Graph
                         graph={styleGraph}
                         options={options}

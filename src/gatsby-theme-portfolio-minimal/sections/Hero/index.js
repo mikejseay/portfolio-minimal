@@ -87,7 +87,7 @@ export function HeroSection(props) {
                         </Animation>
                     </div>
                     <div className={'my-horizontal-element'}>
-                        <div className={'my-vis-container'}>
+                        <div className={'my-vis-container-hero'}>
                             <Graph
                                 graph={genreGraph}
                                 options={options}
