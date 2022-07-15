@@ -12,6 +12,7 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@browniebroke/gatsby-image-gallery": "^7.0.7",
     "gatsby": "^4.0.2",
     "gatsby-plugin-image": "^2.16.1",
     "gatsby-remark-images": "^6.18.0",

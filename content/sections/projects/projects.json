@@ -64,6 +64,24 @@
     },
     {
       "visible": true,
+      "category": "Data Visualization",
+      "title": "Scientific Visualizations",
+      "description": "Over my eleven-year career as a scientist, I've created hundreds of data visualizations for manuscripts, presentations, and grants in order to support lab goals. Here, I show a gallery of some of my favorites. The visualizations were generated using Python, R, and MATLAB, and editing was done in Adobe Illustrator.",
+      "tags": ["Data Visualization", "Python", "R"],
+      "image": {
+        "src": "../../images/gallery/viz14.png",
+        "alt": "Scientific Viz",
+        "linkTo": "/viz"
+      },
+      "links": [
+        {
+          "type": "external",
+          "url": "/viz"
+        }
+      ]
+    },
+    {
+      "visible": true,
       "category": "Fun & Games",
       "title": "Exquisite Text",
       "description": "Exquisite Corpse is a game invented by surrealist artists in the 1920's. Each player adds to a composition in sequence, by being allowed to see only the end of what the previous person contributed. Here, I implemented an online multiplayer version for poetry.",

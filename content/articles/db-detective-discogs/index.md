@@ -15,23 +15,23 @@ keywords:
     - 'Music'
     - 'Database'
     - 'Visualization'
+    - 'NetworkAnalysis'
     - 'SQL'
     - 'PostgreSQL'
     - 'Tableau'
     - 'Python'
     - 'networkx'
-    - 'Network Analysis'
     - 'JavaScript'
     - 'vis-network'
 ---
 
 # Table of Contents
-1. [Chapter 1: Building the database](#ch1)
-2. [Chapter 2: Questions and answers](#ch2)
-3. [Chapter 3: A brief history of recorded audio, as told by Discogs](#ch3)
-4. [Chapter 4: A galaxy of genres, a sea of styles](#ch4)
-5. [Chapter 5: Questions and answers, pt. 2](#ch5)
-6. [Chapter 6: Conclusion](#ch6)
+1. [Building the database](#ch1)
+2. [Questions and answers](#ch2)
+3. [A brief history of recorded audio, as told by Discogs](#ch3)
+4. [A galaxy of genres, a sea of styles](#ch4)
+5. [Questions and answers, pt. 2](#ch5)
+6. [Conclusion](#ch6)
 
 ## Chapter 1: Building the database <a name='ch1'></a>
 

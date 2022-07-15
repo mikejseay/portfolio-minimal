@@ -1,3 +1,19 @@
+.Article a:link {
+    color: blue;
+    text-decoration: underline;
+}
+.Article a:visited {
+    text-decoration: underline;
+}
+.Article a:hover {
+    color: hotpink;
+    text-decoration: underline;
+}
+.Article a:active {
+    color: red;
+    text-decoration: underline;
+}
+
 .my-iframe {
     display: block;
 }

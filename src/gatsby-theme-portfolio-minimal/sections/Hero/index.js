@@ -18,7 +18,6 @@ export function HeroSection(props) {
         nodes: genreNodes,
         edges: genreEdges,
     }
-    console.log(genreNodes);
     const options = {
         autoResize: true,
         width: '400px',
@@ -41,8 +40,7 @@ export function HeroSection(props) {
         },
         nodes: {
             borderWidth: 2,
-            shape: 'circularImage',
-            image: 'oops',
+            shape: 'dot',
         },
         interaction: {
             hover: true,
