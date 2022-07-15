@@ -22,7 +22,8 @@
         { "label": "About", "url": "/#about" },
         { "label": "Skills", "url": "/#skills" },
         { "label": "Projects", "url": "/#projects" },
-        { "label": "Contact", "url": "/#contact" }
+        { "label": "Contact", "url": "/#contact" },
+        { "label": "Pubs", "url": "/publications" }
       ],
       "ctaButton": {
         "openNewTab": true,
