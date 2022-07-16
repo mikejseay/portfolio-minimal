@@ -479,7 +479,7 @@ To carry out the rest of this analysis and visualize the results, I used Python 
 
 This provides an interactive visualization in which you can zoom, move nodes, and play to your heart's content. Please check it out using <a href="/styleNetwork" target="_blank">this link</a> or click the picture below!
 
-<a href="/styleNetwork" target="_blank">![A network representation of musical styles on Discogs](styleNetworkSnapshot.png "Discogs Style Network")</a>
+<a href="/styleNetwork" target="_blank"><img src="/styleNetworkSnapshot.png" alt="Discogs Style Network"></a>
 
 ## Chapter 5: Questions and answers, pt. 2  <a name='ch5'></a>
 
