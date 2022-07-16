@@ -18,11 +18,6 @@ module.exports = {
           path: "/blog", // Defines the slug for the blog listing page
           usePathPrefixForArticles: false, // Default true (i.e. path will be /blog/first-article)
         },
-        // googleAnalytics: {
-        //     trackingId: "UA-XXXXXX-X",
-        //     anonymize: true, // Default true
-        //     environments: ["production", "development"] // Default ["production"]
-        // }
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -40,19 +35,23 @@ module.exports = {
         path: `${__dirname}/content/articles`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     // {
-    //   resolve: `gatsby-plugin-manifest`,
+    //   resolve: `gatsby-transformer-remark`,
     //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
+    //     plugins: [
+    //       `gatsby-remark-relative-images`,
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 800,
+    //           linkImagesToOriginal: false,
+    //           showCaptions: true
+    //         }
+    //       },
+    //     ]
+    //   }
     // },
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
   ],
 };
