@@ -42,9 +42,5 @@
     "animations",
     "dark-mode",
     "gdpr-compliant"
-  ],
-  "devDependencies": {
-    "@parcel/namer-default": "^2.5.0",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27"
-  }
+  ]
 }
