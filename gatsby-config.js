@@ -40,22 +40,6 @@ module.exports = {
         path: `${__dirname}/content/articles`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              linkImagesToOriginal: false,
-              showCaptions: true
-            }
-          },
-        ]
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
