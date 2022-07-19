@@ -44,6 +44,8 @@ export function HeroSection(props) {
         },
         interaction: {
             hover: true,
+            dragView: false,
+            zoomView: false,
         },
     };
     const events = {

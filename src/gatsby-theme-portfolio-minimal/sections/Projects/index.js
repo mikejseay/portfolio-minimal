@@ -28,6 +28,7 @@ export function ProjectsSection(props) {
                     />
                 </Animation>
             )}
+            <div className={"smoking-gun"}> </div>
         </Section>
     );
 }

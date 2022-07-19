@@ -5,7 +5,6 @@ import Gallery from '@browniebroke/gatsby-image-gallery'
 import './viz.css';
 
 export default function Viz({data}) {
-    console.log(data);
     const gallery = data.gallery.edges.map(({node}, index) => ({
         ...node.childImageSharp,
         // Generate name based on the index as caption.
