@@ -24,6 +24,28 @@
     },
     {
       "visible": true,
+      "category": "Machine Learning Research",
+      "title": "Is Dale's Law Computationally Beneficial?",
+      "description": "In artificial neural networks, a single unit can excite some of its targets and inhibit others. But in biology, neurons are almost always exclusively excitatory or inhibitory (Dale’s Law). Do networks of excitatory and inhibitory units provide a computational benefit? In this research project I use PyTorch to show that when given the opportunity, recurrent neural networks (RNNs) will train themselves to follow Dale’s Law to accomplish certain simple tasks.",
+      "tags": ["Python", "PyTorch", "RNN"],
+      "image": {
+        "src": "../../images/dales_law.jpg",
+        "alt": "To Dale, or Not To Dale?",
+        "linkTo": "https://docs.google.com/presentation/d/1D7Nl_sDd8NvoZ2cMzA_ASD8mVqqolTvrrSVCc_yNCIw/edit?usp=sharing"
+      },
+      "links": [
+        {
+          "type": "external",
+          "url": "https://docs.google.com/presentation/d/1D7Nl_sDd8NvoZ2cMzA_ASD8mVqqolTvrrSVCc_yNCIw/edit?usp=sharing"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/mikejseay/DaleRNNTorch"
+        }
+      ]
+    },
+    {
+      "visible": true,
       "category": "Scientific Data Management",
       "title": "HBNL Database",
       "description": "While working at a lab in Brooklyn, I co-wrote a Python module for building, updating, and accessing a lab database implemented in MongoDB. Still used today, it contains hundreds of thousands of records from disparate sources (EEG, behavioral experiment, survey, genetics, genealogy).",
