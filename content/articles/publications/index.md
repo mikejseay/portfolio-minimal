@@ -14,10 +14,21 @@ keywords:
 ---
 
 ## Table of Contents
-1. [Seay et al. (2020)](#1)
-2. [Pandey, Seay, et al. (2020)](#2)
-3. [Motanis*, Seay*, and Buonomano (2018)](#3)
-4. [Mock, Seay, et al. (2015)](#4)
+1. [Soldado-Magraner, Seay, et al. (2022)](#1)
+2. [Seay et al. (2020)](#2)
+3. [Pandey, Seay, et al. (2020)](#3)
+4. [Motanis*, Seay*, and Buonomano (2018)](#4)
+5. [Mock, Seay, et al. (2015)](#5)
+
+### Paradoxical self-sustained dynamics emerge from orchestrated excitatory and inhibitory homeostatic plasticity rules
+
+#### [Proceedings of the National Academy of Sciences](https://www.pnas.org/doi/10.1073/pnas.2200621119) · Oct 17, 2022
+
+In this project, I created a complex, biologically-plausible network model to simulate bouts of self-sustained activity that are often observed in the brain. Additionally, the network was able to train itself to exhibit self-sustained activity using learning rules that were mathematically derived by my co-authors. The sparse spiking network model was implemented in the Python library `brian2` with leaky integrate-and-fire units. I was also able to show that in a network that has sufficiently strong recurrent excitation, stimulating inhibitory units actually causes the network's firing rates to decrease, which is referred to as the paradoxical effect. For the paper I created a figure with twelve panels to illustrate the spiking model's self-sustained activity behavior over the course of learning. 
+
+[Link to PDF](/soldadoMagraner2022.pdf)
+
+[Link to Github Repository](https://github.com/mikejseay/spiking-upstates/tree/Paradoxical2022)
 
 ### Differential short-term plasticity of PV and SST neurons accounts for adaptation and facilitation of cortical neurons to auditory tones <a name='1'></a>
 
