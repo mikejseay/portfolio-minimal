@@ -111,12 +111,12 @@
       "image": {
         "src": "../../images/exquisite-text.jpg",
         "alt": "Extendable Layout",
-        "linkTo": "https://exquisite-text-js-hub-1.herokuapp.com/"
+        "linkTo": "https://www.exquisitetext.com/"
       },
       "links": [
         {
           "type": "external",
-          "url": "https://exquisite-text-js-hub-1.herokuapp.com/"
+          "url": "https://www.exquisitetext.com/"
         },
         {
           "type": "github",
