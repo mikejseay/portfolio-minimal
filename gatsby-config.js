@@ -35,6 +35,7 @@ module.exports = {
         path: `${__dirname}/content/articles`,
       },
     },
+    `gatsby-plugin-netlify`,
     // {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {
